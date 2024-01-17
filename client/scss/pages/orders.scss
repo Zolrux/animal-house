@@ -1,0 +1,222 @@
+body {
+  background-color: $btnDark;
+}
+.orders {
+  padding: rem(53) rem(0);
+  color: $white;
+  // .order__wrapper
+  &__wrapper {
+    max-width: rem(1200);
+    margin: 0 auto;
+  }
+  // .orders__header
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+  // .orders__title
+  &__title {
+    font-size: rem(48);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+  // .orders__page-link
+  &__page-link {
+    width: rem(64);
+    height: rem(64);
+  }
+  // .orders__logout-link
+  &__logout-link {
+	font-size: rem(32);
+	margin-left: auto;
+	@media (any-hover: hover){
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+  }
+  // .orders__role
+  &__role {
+    font-size: rem(48);
+    font-weight: 400;
+  }
+  // .orders__body
+  &__body {
+  }
+}
+.body-orders {
+  // .body-orders__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+  }
+  // .body-orders__item
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(31);
+	 &::after{
+		content:'';
+		position: absolute;
+		top: 0;
+		right: rem(-15);
+		width: rem(10);
+		display: block;
+		height: 100%;
+		border-radius: rem(60);
+	 }
+	 &--waiting::after {
+		background-color: #FFD467;
+	 }
+	 &--done::after {
+		background-color: #32C654;
+	 }
+	 &--canceled::after {
+		background-color: #d51f1f;
+	 }
+  }
+  // .body-orders__item--waiting
+  &__item--waiting {
+  }
+  // .body-orders__user
+  &__user {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(22);
+  }
+  // .body-orders__user-image
+  &__user-image {
+    width: rem(100);
+    height: rem(100);
+    background-color: rgba($mainColor, 0.5);
+    border-radius: 50%;
+  }
+  // .body-orders__fullname
+  &__fullname {
+    font-size: rem(32);
+    font-weight: 400;
+  }
+  // .body-orders__info
+  &__info {
+    position: relative;
+    display: flex;
+    column-gap: rem(10);
+    border-radius: rem(10);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    flex: 1 1 auto;
+    padding: rem(15) rem(21) rem(9) rem(17);
+  }
+  // .body-orders__fields
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: rem(6) rem(15);
+    flex: 1 1 auto;
+  }
+  // .body-orders__field
+  &__field {
+    flex: 0 0 rem(350);
+    border-radius: rem(10);
+    border: rem(1) solid rgba(255, 255, 255, 0.5);
+    padding: rem(13) rem(14) rem(12);
+	 font-size: rem(32);
+	 font-weight: 400;
+  }
+  // .body-orders__name
+  &__name {
+  }
+  // .body-orders__surname
+  &__surname {
+  }
+  // .body-orders__arrival-date
+  &__arrival-date {
+  }
+  // .body-orders__phone
+  &__phone {
+  }
+  // .body-orders__animal
+  &__animal {
+  }
+  // .body-orders__departure-date
+  &__departure-date {
+  }
+  // .body-orders__status-info
+  &__status-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 0 0 rem(100);
+    text-align: right;
+  }
+  // .body-orders__status
+  &__status {
+    display: inline-block;
+    border-radius: rem(10);
+    padding: rem(10);
+	 font-size: rem(32);
+	 font-weight: 400;
+	 text-transform: capitalize;
+	 .body-orders__item--waiting & {
+		background: #ffd467;
+	 }
+	 .body-orders__item--done & {
+		background: #32C654;
+	 }
+	 .body-orders__item--canceled & {
+		background: #d51f1f;
+	 }
+  }
+  // .body-orders__admin-panel
+  &__admin-panel {
+  }
+  // .body-orders__menu-status
+  &__menu-status {
+    position: absolute;
+    top: 0;
+    right: rem(-8);
+    width: rem(25);
+    height: rem(25);
+  }
+  // .body-orders__status-list
+  &__status-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    width: rem(100);
+    transform: translate(-15%, -80%);
+    background-color: $mainColor;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    padding: rem(10);
+    li {
+      text-align: center;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $hoverBtn;
+        }
+      }
+    }
+    .body-orders__admin-panel.active & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .body-orders__status-btn
+  &__status-btn {
+	width: 100%;
+  }
+}

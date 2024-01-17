@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href=/orders.css>
+	<title>Animal House</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page orders">
+			<div class="orders__wrapper">
+				<div class="orders__header">
+					<a href="/" class="orders__page-link">
+						<img src="/icons/sprite.svg#orders-user" alt="order user icon">
+					</a>
+					<div class="orders__role"><%- userRole %></div>
+					<a href="/logout" class="orders__logout-link">Logout</a>
+				</div>
+				<h1 class="orders__title">Booking panel</h1>
+				<div class="orders__body body-orders">
+					<ul class="body-orders__list">
+						<% if (orders && orders.length) { %>
+							<% orders.forEach(function(order) { %>
+								<li class="body-orders__item body-orders__item--<%- order.status %>">
+									<div class="body-orders__user">
+										<div class="body-orders__user-image"></div>
+										<div class="body-orders__fullname"><%- order.name %> <%- order.surname %></div>
+									</div>
+									<div class="body-orders__info">
+										<div class="body-orders__fields">
+											<div class="body-orders__field body-orders__name"><%- order.name %></div>
+											<div class="body-orders__field body-orders__surname"><%- order.surname %></div>
+											<div class="body-orders__field body-orders__arrival-date"><%- order.arrivalDate %>
+											</div>
+											<div class="body-orders__field body-orders__phone"><%- order.phone %></div>
+											<div class="body-orders__field body-orders__animal"><%- order.animal %></div>
+											<div class="body-orders__field body-orders__departure-date"><%- order.departureDate %>
+											</div>
+										</div>
+										<div class="body-orders__status-info">
+											<div class="body-orders__status"><%- order.status %></div>
+											<% if (userRole === 'admin') { %>
+												<div class="body-orders__admin-panel" id="order-<%- order.id %>">
+													<button type="button" class="body-orders__menu-status">
+														<img src="/icons/sprite.svg#order-menu" alt="order menu icon">
+													</button>
+													<ul class="body-orders__status-list">
+														<li>
+															<button type="button" data-status="waiting" class="body-orders__status-btn">Waiting</button>
+														</li>
+														<li>
+															<button type="button" data-status="done" class="body-orders__status-btn">Done</button>
+														</li>
+														<li>
+															<button type="button" data-status="canceled" class="body-orders__status-btn">Canceled</button>
+														</li>
+													</ul>
+												</div>
+											<% } %>
+										</div>
+									</div>
+								</li>
+						<% }) %>
+						<% } else { %>
+								<div class="body-orders__empty">There are no orders...</div>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="/app.bundle.js"></script>
+</body>
+
+</html>

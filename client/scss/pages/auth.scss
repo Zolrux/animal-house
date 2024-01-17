@@ -1,0 +1,128 @@
+body {
+  background-color: $btnDark;
+}
+.auth {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: rem(54) 0 rem(50);
+  // .registration__form
+  &-form {
+    max-width: rem(650);
+    width: 100%;
+    color: $white;
+  }
+  &-form.registration__form:not(:last-child) {
+    margin: 0px 0px rem(11) 0px;
+  }
+  &-form.login__form:not(:last-child) {
+    margin: 0px 0px rem(11) 0px;
+  }
+  // .registration__link
+  &__link {
+    max-width: rem(650);
+    width: 100%;
+    text-align: center;
+    color: $white;
+    border-radius: rem(10);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    padding: rem(10) rem(30);
+    font-size: rem(48);
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $hoverBtn;
+      }
+    }
+  }
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(11);
+  // .auth-form__title
+  &__title {
+    color: $white;
+    font-size: rem(48);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin: 0px 0px rem(11) 0px;
+    }
+  }
+  // .form-registration__fieldset
+  &__fieldset {
+  }
+  // .form-registration__label
+  &__label {
+    font-size: rem(32);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(11);
+    &--password {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .form-registration__wrapper
+  &__wrapper {
+    display: flex;
+    column-gap: rem(36);
+  }
+  // .form-registration__input
+  &__input {
+    border-radius: rem(10);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    min-height: rem(80);
+    padding: rem(5) rem(15);
+    color: $white;
+    font-size: rem(32);
+    .auth-form__label & {
+      flex: 1 1 auto;
+    }
+  }
+  // .form-registration__password
+  &__password {
+    flex-basis: rem(48);
+  }
+  // .form-registration__password-show
+  &.show &__password-show {
+    display: none;
+  }
+  &__password-hide {
+    display: none;
+  }
+  &.show &__password-hide {
+    display: block;
+  }
+  // .form-registration__policy
+  &__policy {
+    text-align: left;
+  }
+  // .form-registration__btn
+  &__btn {
+    border-radius: rem(10);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    padding: rem(10) rem(30);
+    font-size: rem(48);
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $hoverBtn;
+      }
+    }
+  }
+
+  &__errors {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(15);
+    padding: rem(15);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    color: rgb(206, 53, 53);
+	 font-size: rem(24);
+  }
+}

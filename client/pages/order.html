@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../components/head.html', {
+css: "css/order.css"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page order">
+			<form action="#" method="POST" class="form-order">
+				<h1 class="form-order__title">Booking</h1>
+				<div class="form-order__descr">Fill out the form, we will get back to you within the next short while</div>
+				<div class="form-order__fields">
+					<fieldset class="form-order__fieldset">
+						<input type="text" class="form-order__input" placeholder="Owner's name">
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<input type="tel" class="form-order__input form-order__input-phone" placeholder="Phone number">
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<input type="email" class="form-order__input" placeholder="Email">
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<select name="" class="form-order__select">
+							<option value="Type of animal" disabled selected>Type of animal</option>
+							<option value="Cat">Cat</option>
+							<option value="Dog">Dog</option>
+							<option value="Parrot">Parrot</option>
+							<option value="Rabbit">Rabbit</option>
+						</select>
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<input type="text" class="form-order__input" placeholder="Nickname">
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<textarea type="text" class="form-order__input" placeholder="Your comments"></textarea>
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<input type="text" class="form-order__input form-order__input-arrival-date" placeholder="Arrival date">
+					</fieldset>
+					<fieldset class="form-order__fieldset">
+						<input type="text" class="form-order__input form-order__input-departure-date" placeholder="Date of departure">
+					</fieldset>
+				</div>
+				<button type="submit" class="form-order__submit">SEND</button>
+			</form>
+		</main>
+	</div>
+	@@include('../components/js.html', {})
+</body>
+
+</html>

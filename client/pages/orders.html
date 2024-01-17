@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../components/head.html', {
+css: "css/orders.css"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page orders">
+			<div class="orders__wrapper">
+				<div class="orders__header">
+					<a href="#" class="orders__page-link">
+						<img src="images/dist/icons/sprite.svg#orders-user" alt="order user icon">
+					</a>
+					<div class="orders__role">user</div>
+				</div>
+				<h1 class="orders__title">Booking panel</h1>
+				<div class="orders__body body-orders">
+					<ul class="body-orders__list">
+						<li class="body-orders__item body-orders__item--waiting">
+							<div class="body-orders__user">
+								<div class="body-orders__user-image"></div>
+								<div class="body-orders__fullname">Anastasia Lecce</div>
+							</div>
+							<div class="body-orders__info">
+								<div class="body-orders__fields">
+									<div class="body-orders__field body-orders__name">Anastasia</div>
+									<div class="body-orders__field body-orders__surname">Lecce</div>
+									<div class="body-orders__field body-orders__arrival-date">16.02.2024</div>
+									<div class="body-orders__field body-orders__phone">0960204353</div>
+									<div class="body-orders__field body-orders__animal">Dog</div>
+									<div class="body-orders__field body-orders__departure-date">23.02.2024</div>
+								</div>
+								<div class="body-orders__status-info">
+									<div class="body-orders__status">Waiting</div>
+									<div class="body-orders__admin-panel">
+										<button type="button" class="body-orders__menu-status">
+											<img src="images/dist/icons/sprite.svg#order-menu" alt="order menu icon">
+										</button>
+										<ul class="body-orders__status-list">
+											<li>
+												<button type="button" class="body-orders__status-btn">Waiting</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Done</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Canceled</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="body-orders__item body-orders__item--done">
+							<div class="body-orders__user">
+								<div class="body-orders__user-image"></div>
+								<div class="body-orders__fullname">Anastasia Lecce</div>
+							</div>
+							<div class="body-orders__info">
+								<div class="body-orders__fields">
+									<div class="body-orders__field body-orders__name">Anastasia</div>
+									<div class="body-orders__field body-orders__surname">Lecce</div>
+									<div class="body-orders__field body-orders__arrival-date">16.02.2024</div>
+									<div class="body-orders__field body-orders__phone">0960204353</div>
+									<div class="body-orders__field body-orders__animal">Dog</div>
+									<div class="body-orders__field body-orders__departure-date">23.02.2024</div>
+								</div>
+								<div class="body-orders__status-info">
+									<div class="body-orders__status">Done</div>
+									<div class="body-orders__admin-panel">
+										<button type="button" class="body-orders__menu-status">
+											<img src="images/dist/icons/sprite.svg#order-menu" alt="order menu icon">
+										</button>
+										<ul class="body-orders__status-list">
+											<li>
+												<button type="button" class="body-orders__status-btn">Waiting</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Done</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Canceled</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="body-orders__item body-orders__item--canceled">
+							<div class="body-orders__user">
+								<div class="body-orders__user-image"></div>
+								<div class="body-orders__fullname">Anastasia Lecce</div>
+							</div>
+							<div class="body-orders__info">
+								<div class="body-orders__fields">
+									<div class="body-orders__field body-orders__name">Anastasia</div>
+									<div class="body-orders__field body-orders__surname">Lecce</div>
+									<div class="body-orders__field body-orders__arrival-date">16.02.2024</div>
+									<div class="body-orders__field body-orders__phone">0960204353</div>
+									<div class="body-orders__field body-orders__animal">Dog</div>
+									<div class="body-orders__field body-orders__departure-date">23.02.2024</div>
+								</div>
+								<div class="body-orders__status-info">
+									<div class="body-orders__status">Canceled</div>
+									<div class="body-orders__admin-panel">
+										<button type="button" class="body-orders__menu-status">
+											<img src="images/dist/icons/sprite.svg#order-menu" alt="order menu icon">
+										</button>
+										<ul class="body-orders__status-list">
+											<li>
+												<button type="button" class="body-orders__status-btn">Waiting</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Done</button>
+											</li>
+											<li>
+												<button type="button" class="body-orders__status-btn">Canceled</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</div>
+	@@include('../components/js.html', {})
+</body>
+
+</html>

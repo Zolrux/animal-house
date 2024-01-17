@@ -1,0 +1,106 @@
+body {
+  background-color: $btnDark;
+}
+.order {
+  padding: rem(50) 0;
+}
+.form-order {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(1200);
+  width: 100%;
+  margin: 0 auto;
+  color: $white;
+  // .form-order__title
+  &__title {
+    font-size: rem(48);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+  // .form-order__descr
+  &__descr {
+    font-size: rem(32);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+  // .form-order__fields
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: rem(100);
+    row-gap: rem(50);
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+  // .form-order__fieldset
+  &__fieldset {
+    flex: 1 1 rem(550);
+  }
+  // .form-order__input
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: rem(10);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    color: $white;
+    height: rem(80);
+    font-size: rem(32);
+    font-weight: 400;
+    padding: rem(20) rem(16);
+    resize: none;
+    overflow: hidden;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    &:disabled {
+      background-color: rgba($white, 0.2);
+    }
+  }
+  // .form-order__select
+  &__select {
+    @extend .form-order__input;
+    font-family: 'Rancho';
+    color: $white;
+    background: url('../images/dist/icons/sprite.svg#arrow-down') 97% 50% / rem(32) rem(32) no-repeat;
+    option {
+      background-color: $btnDark;
+    }
+  }
+  // .form-order___submit
+  &__submit {
+    align-self: flex-end;
+    min-width: rem(225);
+    border-radius: rem(10);
+    font-size: rem(48);
+    padding: rem(10) rem(20);
+    background: $mainColor;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $hoverBtn;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+  &__errors {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    margin: 0 auto;
+    row-gap: rem(15);
+    padding: rem(15);
+    border: rem(2) solid rgba(255, 255, 255, 0.5);
+    color: rgb(206, 53, 53);
+    font-size: rem(24);
+    text-align: center;
+  }
+}

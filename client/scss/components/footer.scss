@@ -1,0 +1,65 @@
+.footer {
+  background-color: $btnDark;
+  padding: rem(19) 0;
+  // .footer__container
+  &__container {
+  }
+  // .footer__body
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .footer__logo
+  &__logo {
+    max-width: rem(141);
+    width: 100%;
+  }
+  // .footer__right
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(100);
+  }
+  // .footer__phones
+  &__phones {
+  }
+  // .footer__phone
+  &__phone {
+    display: block;
+    color: $white;
+    text-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    font-family: 'Rancho';
+    font-size: rem(32);
+    line-height: 130%;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: rgba($white, 0.7);
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    gap: rem(100);
+  }
+  // .footer__social
+  &__social {
+    width: rem(64);
+    height: rem(64);
+    border-radius: 50%;
+    img {
+      max-width: 100%;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+  // .footer__copy
+  &__copy {
+    max-width: rem(280);
+    color: $white;
+    text-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    font-size: rem(32);
+  }
+}

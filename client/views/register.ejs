@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href=/auth.css>
+	<title>Animal House</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page auth registration">
+			<form action="/register" method="POST" class="auth-form registration__form form-registration">
+				<h1 class="auth-form__title form-registration__title">Registration</h1>
+				<fieldset class="auth-form__fieldset form-registration__fieldset">
+					<label for="#" class="auth-form__label form-registration__label">
+						Name
+						<input type="text" name="name" class="auth-form__input form-registration__input form-registration__input--name" value="<%- values.name %>">
+					</label>
+				</fieldset>
+				<fieldset class="auth-form__fieldset form-registration__fieldset">
+					<label for="#" class="auth-form__label form-registration__label">
+						Surname
+						<input type="text" name="surname" class="auth-form__input form-registration__input form-registration__input--surname" value="<%- values.surname %>">
+					</label>
+				</fieldset>
+				<fieldset class="auth-form__fieldset form-registration__fieldset">
+					<label for="#" class="auth-form__label form-registration__label">
+						Phone number
+						<input type="text" name="phone" class="auth-form__input form-registration__input form-registration__input--phone" value="<%- values.phone %>">
+					</label>
+				</fieldset>
+				<fieldset class="auth-form__fieldset form-registration__fieldset">
+					<label for="#" class="auth-form__label form-registration__label">
+						Email address
+						<input type="email" name="email" class="auth-form__input auth-form__input-email form-registration__input" value="<%- values.email %>">
+					</label>
+				</fieldset>
+				<fieldset class="auth-form__fieldset form-registration__fieldset">
+					<label for="#" class="auth-form__label form-registration__label form-registration__label-password">
+						Create a password
+						<div class="auth-form__wrapper form-registration__wrapper">
+							<input type="password" name="password" class="auth-form__input auth-form__input-password form-registration__input" value="<%- values.password %>">
+							<button type="button" class="auth-form__password auth-form__password-show form-registration__password-show">
+								<img src="/icons/sprite.svg#eye" alt="eye">
+							</button>
+							<button type="button" class="auth-form__password auth-form__password-hide form-login__password-hide">
+								<img src="/icons/sprite.svg#hide-eye" alt="hide eye">
+							</button>
+						</div>
+					</label>
+				</fieldset>
+				<a href="#" class="form-registration__policy">
+					By registering, you agree to the terms of the policy on the processing and protection of personal data
+					and the user agreement
+				</a>
+				<button type="submit" class="auth-form__btn form-registration__btn">Register</button>
+				<% if (errors && errors.length) { %>
+					<div class="auth-form__errors">
+					  <% errors.forEach(function(error) { %>
+						 <div class="auth-form__error"><%= error %></div>
+					  <% }) %>
+					</div>
+				 <% } %>
+			</form>
+			<a href="/login" class="auth__link registration__link">I am already registered</a>
+		</main>
+	</div>
+	<script src="/app.bundle.js"></script>
+</body>
+
+</html>

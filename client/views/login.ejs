@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
+	<link rel="stylesheet" href=/auth.css>
+	<title>Animal House</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page auth login">
+			<form action="/login" method="POST" class="auth-form login__form form-login">
+				<h1 class="auth-form__title form-login__title">Sign in</h1>
+				<fieldset class="auth-form__fieldset form-login__fieldset">
+					<label for="#" class="auth-form__label form-login__label">
+						E-mail
+						<input type="email" name="email" class="auth-form__input form-login__input">
+					</label>
+				</fieldset>
+				<fieldset class="auth-form__fieldset form-login__fieldset">
+					<label for="#" class="auth-form__label form-login__label form-login__label--password">
+						Password
+						<div class="auth-form__wrapper form-login__wrapper">
+							<input type="password" name="password" class="auth-form__input auth-form__input-password form-login__input">
+							<button type="button" class="auth-form__password auth-form__password-show form-login__password-show">
+								<img src="/icons/sprite.svg#eye" alt="eye">
+							</button>
+							<button type="button" class="auth-form__password auth-form__password-hide form-login__password-hide">
+								<img src="/icons/sprite.svg#hide-eye" alt="hide eye">
+							</button>
+						</div>
+					</label>
+				</fieldset>
+				<button type="submit" class="auth-form__btn form-login__btn">Sign in</button>
+				<% if (errors && errors.length) { %>
+					<div class="auth-form__errors">
+					  <% errors.forEach(function(error) { %>
+						 <div class="auth-form__error"><%= error %></div>
+					  <% }) %>
+					</div>
+				 <% } %>
+			</form>
+			<a href="/register" class="auth__link login__link">Register</a>
+		</main>
+	</div>
+	<script src="/app.bundle.js"></script>
+</body>
+
+</html>

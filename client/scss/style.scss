@@ -1,0 +1,15 @@
+@use "sass:math";
+
+// Base
+@import "base/fonts";
+@import "base/var";
+@import "base/functions";
+@import "base/config";
+@import "base/null";
+
+// Components
+@import "components/header";
+@import "components/footer";
+
+// Pages
+@import "pages/index";
